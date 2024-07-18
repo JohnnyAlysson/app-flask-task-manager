@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Update task</title>
+
+{% endblock %}  
+<!-- END HEAD -->
+
+{% block body %}
+<div class="content">
+
+    <h1>Update task</h1>
+
+
+    <form action="/update/{{task.id}}" method="POST">
+      <input type="text" placeholder="Type your task here:" name="content" id=content value="{{task.content}}">
+      <input type="submit" value="update">
+    </form>
+</div>
+
+<div class="dark-mode-toggle">
+  <button id="dark-mode-toggle-btn">Toggle Dark Mode</button>
+</div>
+{% endblock %}
+<!-- end body -->
